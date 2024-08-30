@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+$inter: 'Inter', sans-serif;
+
+$misty-green: rgb(201, 211, 195);
+$graphite-black: rgb(51, 54, 61);
+$green: rgb(103, 119, 39);
+$dark-green: rgba(155, 168, 141, 0.45);
+
+*,
+*:before,
+*:after {
+    font-weight: 300;
+    box-sizing: border-box;
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-weight: 500;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: $inter;
+    background: $misty-green;
+    color: $graphite-black;
+    min-height: 100vh;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.center {
+    text-align: center;
+}
+
+.card {
+    justify-content: space-between;
+    max-width: 700px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 1px rgba(57, 62, 70, 0.4);
+    background-color: $dark-green;
+    backdrop-filter: blur(15px);
+}

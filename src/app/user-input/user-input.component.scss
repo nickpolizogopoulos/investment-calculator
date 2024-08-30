@@ -1,0 +1,56 @@
+@import "../../styles.scss";
+
+form {
+    padding: 1rem;
+    margin: 2rem auto;
+    border-radius: 4px;
+}
+  
+.input-group {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+}
+  
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+  
+input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid grey;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    color: $graphite-black;
+    font-size: 1rem;
+    &:hover {
+      background-color: $dark-green;
+    }
+    &:focus {
+      background-color: $dark-green;
+      outline: none;
+      border: 1px solid $graphite-black;
+    }
+}
+  
+button {
+    width: 30%;
+    padding: 0.5rem;
+    border: 1px solid grey;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    color: $graphite-black;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+      border: 1px solid $graphite-black;
+      background-color: $dark-green;
+    }
+}
+
+.button-box {
+  margin: 25px 0 0;
+  text-align: center;
+}
