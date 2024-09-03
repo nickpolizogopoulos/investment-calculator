@@ -1,0 +1,23 @@
+@if (!results()) {
+    <p class="center">Please enter some values and press "calculate"</p>
+}
+@else {
+    <table>
+        <thead>
+            <tr>
+                @for (item of tHeadValues; track $index) { <th>{{ item }}</th> }
+            </tr>
+        </thead>
+        <tbody>
+            @for (result of results(); track result.year) {
+                <tr>
+                    <td>{{ result.year | ordinal }}</td>
+                    <td>{{ result.valueEndOfYear | currency: 'EUR' }}</td>
+                    <td>{{ result.interest | currency: 'EUR' }}</td>
+                    <td>{{ result.totalInterest | currency: 'EUR' }}</td>
+                    <td>{{ result.totalAmountInvested | currency: 'EUR' }}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

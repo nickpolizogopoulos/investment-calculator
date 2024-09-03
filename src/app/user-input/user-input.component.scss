@@ -1,9 +1,7 @@
 @import "../../styles.scss";
 
 form {
-    padding: 1rem;
-    margin: 2rem auto;
-    border-radius: 4px;
+  @extend %card;
 }
   
 .input-group {
@@ -20,18 +18,15 @@ label {
 input {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid grey;
+    border: 1px solid rgb(166, 166, 166);
     border-radius: 0.25rem;
-    background-color: transparent;
-    color: $graphite-black;
+    background-color: rgba(255, 255, 255, 0.3);
     font-size: 1rem;
     &:hover {
-      background-color: $dark-green;
+      @extend %hover;
     }
     &:focus {
-      background-color: $dark-green;
-      outline: none;
-      border: 1px solid $graphite-black;
+      @extend %focus-active;
     }
 }
   
@@ -41,16 +36,18 @@ button {
     border: 1px solid grey;
     border-radius: 0.25rem;
     background-color: transparent;
-    color: $graphite-black;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 15px;
     cursor: pointer;
+    margin: 25px 15px 0px auto;
     &:hover {
-      border: 1px solid $graphite-black;
-      background-color: $dark-green;
+      @extend %hover;
+    }
+    &:active {
+      @extend %focus-active;
     }
 }
 
 .button-box {
-  margin: 25px 0 0;
   text-align: center;
 }

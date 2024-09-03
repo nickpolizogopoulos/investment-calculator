@@ -1,0 +1,28 @@
+@import '../../styles.scss';
+
+table {
+    @extend %card;
+    padding: 1rem;
+    table-layout: fixed;
+    border-spacing: 1.8rem;
+    width: 100%;
+    text-align: center;
+    
+    @media screen and (max-width: 500px) {
+        border-spacing: none;
+        font-size: 14px;
+        border-collapse: collapse;
+        border: none;
+        text-align: center;
+        td, th {
+            border: none;
+            padding: 15px 5px;
+        }
+    }
+}
+
+th {
+    padding: 0 0 4px 0;
+    border-bottom: 2px solid rgb(131, 131, 131);
+    font-weight: 500;
+}

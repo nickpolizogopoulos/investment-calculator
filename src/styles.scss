@@ -2,17 +2,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 $inter: 'Inter', sans-serif;
-
-$misty-green: rgb(201, 211, 195);
 $graphite-black: rgb(51, 54, 61);
-$green: rgb(103, 119, 39);
-$dark-green: rgba(155, 168, 141, 0.45);
+$dark-green: rgb(34, 111, 87);
+$green: rgba(155, 168, 141, 0.45);
+$hover-bg: rgba(255, 255, 255, 0.4);
+
+%card {
+    margin: 2rem auto;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 2px 2px 13px rgba(57, 62, 70, 0.3);
+    justify-content: space-between;
+    max-width: 800px;
+    border: 2px solid $dark-green;
+    background-color: $green;
+}
+
+%hover {
+    background-color: $hover-bg;
+    border: 1px solid transparent;
+}
+
+%focus-active {
+    background-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+    border: 1px solid rgb(129, 129, 129);
+}
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     font-weight: 300;
     box-sizing: border-box;
+    transition: all .1s ease-in-out;
 }
 
 @for $i from 1 through 6 {
@@ -22,27 +44,11 @@ $dark-green: rgba(155, 168, 141, 0.45);
 }
 
 body {
-    margin: 0;
     font-family: $inter;
-    background: $misty-green;
     color: $graphite-black;
-    min-height: 100vh;
-}
-
-strong {
-    font-weight: 600;
+    background-color: rgb(254, 255, 242);
 }
 
 .center {
     text-align: center;
-}
-
-.card {
-    justify-content: space-between;
-    max-width: 700px;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px 1px rgba(57, 62, 70, 0.4);
-    background-color: $dark-green;
-    backdrop-filter: blur(15px);
 }
